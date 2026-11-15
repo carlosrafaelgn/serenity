@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, shrink-to-fit=no" />
+	<meta name="color-scheme" content="dark" />
+	<meta name="theme-color" content="#000000" />
+
+	<title>Serenity</title>
+
+	<style type="text/css">
+		html, body {
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background: #000;
+			color: #fff;
+			font: normal 16px sans-serif;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		canvas {
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+			touch-action: none;
+		}
+
+		.alert {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 1rem;
+			margin: 0;
+			z-index: 1;
+			text-align: center;
+		}
+
+		.fade {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		.fade.in {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<noscript>Sorry! You need to enable JavaScript in order to run the experience :(</noscript>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

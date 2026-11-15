@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"lib": [ "ES2020", "DOM" ],
+		"sourceMap": false,
+		"outFile": "./script.js",
+		"emitBOM": true,
+		"strict": true,
+		"removeComments": true,
+		"types": []
+	},
+	"files": [
+		"constants.ts",
+		"utils.ts",
+		"fullscreen.ts",
+		"shaders.ts",
+		"gl.ts",
+		"main.ts"
+	]
+}
