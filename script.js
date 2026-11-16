@@ -583,12 +583,12 @@ async function setupWebGL() {
 		for (let i = 0; i < noiseResolution; i += 8) {
 			const noisePromises = new Array(8);
 			for (let j = 0; j < 8; j++)
-				noisePromises[i] = loadNoiseImage(i + j);
+				noisePromises[j] = loadNoiseImage(i + j);
 			try {
 				await Promise.all(noisePromises);
 			}
 			catch (ex) {
-				console.error(`Error loading noise images: ${(ex.message || ex.toString())}`);
+				alert(`Error loading noise images: ${(ex.message || ex.toString())}`);
 				return false;
 			}
 		}
@@ -761,4 +761,10 @@ async function setup() {
 	}
 	render();
 }
-setup().catch(console.error);
+setup().catch(function (reason) {
+	if (!reason)
+		reason = "Unknown error";
+	else if (reason.message)
+		reason = reason.message;
+	alert(reason);
+});

@@ -170,4 +170,10 @@ async function setup() {
 	render();
 }
 
-setup().catch(console.error);
+setup().catch(function (reason) {
+	if (!reason)
+		reason = "Unknown error";
+	else if (reason.message)
+		reason = reason.message;
+	alert(reason);
+});
